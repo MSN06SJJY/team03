@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get(
+    '/', //網址名稱
+    function () //第二個參數 
+    {
+    return view('welcome'); //引導至一份視圖(view) : welcome view
+    }
+);
+
+Route::get(
+    '/sdgs', 
+    function () 
+    {
+    return view('intro_sdgs');
+    }
+);
