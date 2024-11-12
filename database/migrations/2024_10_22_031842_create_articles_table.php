@@ -17,8 +17,8 @@ class CreateArticlesTable extends Migration
             $table->id();  // 自動增加的 ID 欄位
             $table->string('bikeway_name')->comment('自行車道名稱');  // 自行車道名稱
             $table->string('districts')->comment('行政區');  // 行政區
-            $table->double('length', )->comment('長度');  // 長度
-            $table->text('surrounding_attractions')->comment('周邊景點');  // 周邊景點
+            $table->string('length', )->comment('長度');  // 長度
+            $table->string('surrounding_attractions')->comment('周邊景點');  // 周邊景點
             $table->timestamps();  // 追加 created_at 和 updated_at 欄位
         });
     }
