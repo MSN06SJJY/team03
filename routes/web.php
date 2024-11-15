@@ -22,7 +22,7 @@ function ()
     return view('intro_sdg');
 });
 
-Route::get('/', 
+Route::get('/1', 
 function () 
 {
     return view('welcome');
