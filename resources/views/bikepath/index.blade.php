@@ -26,8 +26,7 @@
         table
         {
             border-collapse: collapse; 
-            width: 80%; 
-            background-color: rgb(255, 0, 0);
+            width: 80%;
         }
         tr
         {
@@ -37,6 +36,11 @@
         td
         {
             padding: 12px;
+        }
+        th
+        {
+            padding: 12px; 
+            text-align: left;
         }
         .button 
         {
@@ -91,6 +95,10 @@
         <h1>台南市自行車道</h1></br>
 
         <table border="1">
+                <th>自行車道名稱</th>
+                <th>行政區</th>
+                <th>自行車道長度（公里）</th>
+                <th>周邊景點</th>
             @foreach ($bikepaths as $bikepath)
                 <tr>
                     <td>{{ $bikepath->bike_path_name }}</td>
