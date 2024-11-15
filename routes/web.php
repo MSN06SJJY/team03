@@ -22,3 +22,9 @@ function ()
     return view('intro_sdg');
 });
 
+Route::get('/', 
+function () 
+{
+    return view('welcome');
+});
+
