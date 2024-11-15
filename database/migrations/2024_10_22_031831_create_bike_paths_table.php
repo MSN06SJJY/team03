@@ -17,8 +17,8 @@ class CreateBikePathsTable extends Migration
             $table->id(); // 自動生成自增主鍵 'id'
             $table->string('bike_path_name')->comment('自行車道名稱');
             $table->string('district')->comment('行政區');
-            $table->double('length')->comment('自行車道長度（公里）');
-            $table->text('nearby_attractions')->nullable()->comment('周邊景點');
+            $table->string('length')->comment('自行車道長度（公里）');
+            $table->string('nearby_attractions')->nullable()->comment('周邊景點');
             $table->timestamps(); // 自動生成 created_at 和 updated_at 欄位
         });
     }
