@@ -14,7 +14,7 @@ class CreateBikePathsTableSeeder extends Seeder
      */
     public function run()
     {       
-        $bike_path_name = [
+        $array_bike_path_name = [
             "省道台1線(後壁-新市段)自行車道",
             "白河蓮鄉自行車道",
             "嘉南大圳新營支線與舊鐵道自行車道",
@@ -61,7 +61,7 @@ class CreateBikePathsTableSeeder extends Seeder
             "鹽水糖鐵綠廊道"
         ];
 
-        $district = [
+        $array_district = [
             "後壁區、新營區、柳營區、六甲區、官田區、善化區及新市區",
             "白河區",
             "後壁區、新營區",
@@ -108,7 +108,7 @@ class CreateBikePathsTableSeeder extends Seeder
             "鹽水區"
         ];
 
-        $length = [
+        $array_length = [
             "43.2km",
             "42km",
             "6km",
@@ -155,7 +155,7 @@ class CreateBikePathsTableSeeder extends Seeder
             "3.18km"
         ];
 
-        $nearby_attractions = [
+        $array_nearby_attractions = [
             "新營天鵝湖、新營糖廠、隆田酒廠、善化啤酒廠",
             "蓮花資訊館、蓮花公園、小南海",
             "烏樹林糖廠、五分車站",
@@ -202,16 +202,19 @@ class CreateBikePathsTableSeeder extends Seeder
             "鹽水月津港、舊台糖鹽水車站"
         ];
 
-        $bike_path_name = [array_rand($bike_path_name)];
-        $district = [array_rand($district)];
-        $length = [array_rand($length)];
-        $nearby_attractions = [array_rand($nearby_attractions)];
-
-        DB::table('bike_paths')->insert([
-            'bike_path_name' => $bike_path_name,
-            'district' => $district,
-            'length' => $length,
-            'nearby_attractions' => $nearby_attractions
-        ]);
+        $bike_path_name = $array_bike_path_name[array_rand($array_bike_path_name)];
+        $district = $array_district[array_rand($array_district)];
+        $length = $array_length[array_rand($array_length)];
+        $nearby_attractions = $array_nearby_attractions[array_rand($array_nearby_attractions)];
+        
+        for ($i = 0; $i < 40; $i++) 
+        {
+            DB::table('bike_paths')->insert([
+                'bike_path_name' => $array_bike_path_name[array_rand($array_bike_path_name)],
+                'district' => $array_district[array_rand($array_district)],
+                'length' => $array_length[array_rand($array_length)],
+                'nearby_attractions' => $array_nearby_attractions[array_rand($array_nearby_attractions)],
+            ]);
+        }
     }
 }
