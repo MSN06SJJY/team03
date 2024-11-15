@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BikePathController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,5 @@ Route::get(
     return view('intro_sdgs');
     }
 );
+
+Route::get('/bikepath',[BikePathController::class, 'index']);

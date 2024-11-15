@@ -59,6 +59,20 @@ li
     border-radius: 5px;
 }
 
+.button 
+{
+    display: inline-block;
+    margin: 20px 10px;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #F57C00;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
 footer 
 {
     text-align: center;
@@ -89,10 +103,11 @@ footer
 </style>
 
 <body>
+
     <header>
         <h1>可持續發展目標 (SDGs)</h1>
         <h3>2030年可持續發展議程的17項全球目標</h3>
-        <img src="SDGs.png" height="370" width="597.5"/>
+        <img src="https://green.nttu.edu.tw/var/file/48/1048/img/SDGs.png" height="370" width="597.5"/>
     </header>
     <main>
         <section>
@@ -106,7 +121,7 @@ footer
             <ul>
                 <!-- 互動框 -->
                 <div class="toggle-box" id="sdgs1">
-                    <li>1.無貧窮<br><img src="sdgs1.jpg" height="107.2" width="160"/>「消除各地一切形式的貧窮」</li></div>
+                    <li>1.無貧窮<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-615ff54ce7aaa.jpg" height="107.2" width="160"/>「消除各地一切形式的貧窮」</li></div>
                     <!-- 下拉的進階內容 -->
                     <div class="content" id="content-sdgs1">
                         1.1　2030年前，消除世界各地所有人的極端貧窮（目前定義為每人每日生活費不足1.25美元）。<br>
@@ -119,7 +134,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs2">
-                    <li>2.零飢餓<br><img src="sdgs2.jpg" height="107.2" width="160"/>「確保糧食安全，消除飢餓，促進永續農業」</li>
+                    <li>2.零飢餓<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202212/article-63a963398d0a0.jpeg" height="107.2" width="160"/>「確保糧食安全，消除飢餓，促進永續農業」</li>
                     <div class="content" id="content-sdgs2">
                         2.1　2030年前，消除飢餓，確保所有的人全年都有安全、營養且足夠的糧食，特別是窮人和弱勢族群（包括嬰兒）。<br>
                         2.2　2030年前，消除所有形式的營養不良。包括：2025年之前達成為五歲以下兒童發育遲緩、消瘦訂定的國際目標，並解決青少女、孕婦、哺乳婦女以及老年人的營養需求。<br>
@@ -132,7 +147,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs3">
-                    <li>3.良好健康與福祉<br><img src="sdgs3.jpg" height="107.2" width="160"/>「確保及促進各年齡層健康生活與福祉」</li>
+                    <li>3.良好健康與福祉<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-616563c27f3e4.jpg" height="107.2" width="160"/>「確保及促進各年齡層健康生活與福祉」</li>
                     <div class="content" id="content-sdgs3">
                         3.1　2030年前，全球孕產婦死亡率降低至每十萬活產中少於70例。<br>
                         3.2　2030年前，消除新生兒和五歲以下兒童的可預防死亡率，所有國家將新生兒死亡率降低至每千人死亡12人，五歲以下兒童死亡率降低至每千人死亡25人。<br>
@@ -150,7 +165,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs4">
-                    <li>4.優質教育<br><img src="sdgs4.jpg" height="107.2" width="160"/>「確保有教無類、公平以及高品質的教育，及提倡終身學習」</li>
+                    <li>4.優質教育<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-616647a6df6f2.jpg" height="107.2" width="160"/>「確保有教無類、公平以及高品質的教育，及提倡終身學習」</li>
                     <div class="content" id="content-sdgs4">
                         4.1　2030年前，確保所有的男孩和女孩都完成免費、公平和優質的中小學教育，取得相關且有效的學習成果。<br>
                         4.2　2030年前，確保所有的孩童都能獲得高品質的幼兒發展、照護及學前教育，為接受小學教育做好準備。<br>
@@ -165,7 +180,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs5">    
-                    <li>5.性別平等<br><img src="sdgs5.jpg" height="107.2" width="160"/>「實現性別平等，並賦予婦女權力」</li>
+                    <li>5.性別平等<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-616651a6c917d.jpg" height="107.2" width="160"/>「實現性別平等，並賦予婦女權力」</li>
                     <div class="content" id="content-sdgs5">
                         5.1　終結所有對婦女和女童的各種形式歧視。<br>
                         5.2　消除在公共和私人領域對女性的各種形式的暴力，包括人口走私、性剝削及其他形式的剝削。<br>
@@ -179,7 +194,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs6">
-                    <li>6.清潔水與衛生<br><img src="sdgs6.jpg" height="107.2" width="160"/>「確保所有人都能享有水、衛生及其永續管理」</li>
+                    <li>6.清潔水與衛生<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-616658ab7845f.jpg" height="107.2" width="160"/>「確保所有人都能享有水、衛生及其永續管理」</li>
                     <div class="content" id="content-sdgs6">
                         6.1　2030年前，實現所有人均能普遍和公平獲得安全且可負擔的飲用水。<br>
                         6.2　2030年前，讓每一個人都享有合適且平等的衛生設備，並杜絕露天大小便行為，特別注意婦女、女童及弱勢族群的需求。<br>
@@ -192,7 +207,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs7">
-                    <li>7.可再生能源<br><img src="sdgs7.jpg" height="107.2" width="160"/>「確保所有的人都可取得負擔得起、可靠、永續及現代的能源」</li>
+                    <li>7.可再生能源<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-61668475479ea.jpg" height="107.2" width="160"/>「確保所有的人都可取得負擔得起、可靠、永續及現代的能源」</li>
                     <div class="content" id="content-sdgs7">
                         7.1　2030年前，確保所有人都能取得可負擔、可靠、和現代化的能源服務。<br>
                         7.2　2030年前，大幅增加再生能源在全球能源結構中的比例。<br>
@@ -202,7 +217,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs8">
-                    <li>8.體面工作與經濟增長<br><img src="sdgs8.jpg" height="107.2" width="160"/>「促進包容且永續的經濟成長，讓每個人都有一份好工作」</li>
+                    <li>8.體面工作與經濟增長<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-616689f6231b8.jpg" height="107.2" width="160"/>「促進包容且永續的經濟成長，讓每個人都有一份好工作」</li>
                     <div class="content" id="content-sdgs8">
                         8.1　依據國情維持人均經濟成長，尤其最低度開發國家（以下簡稱LDCs）的國內生產毛額（GDP）成長率，每年至少需達7%。<br>
                         8.2　透過多元化、技術升級與創新，實現更高水平的經濟生產力，包括將焦點集中在高附加價值與勞動密集產業。<br>
@@ -219,7 +234,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs9">
-                    <li>9.產業、創新與基礎設施<br><img src="sdgs9.jpg" height="107.2" width="160"/>「建構民眾可負擔、安全、對環境友善，且具韌性及可永續發展的運輸」</li>
+                    <li>9.產業、創新與基礎設施<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-61668f2f7d2f2.jpg" height="107.2" width="160"/>「建構民眾可負擔、安全、對環境友善，且具韌性及可永續發展的運輸」</li>
                     <div class="content" id="content-sdgs9">
                         9.1　發展高品質、可靠、永續、具韌性的基礎設施，包括區域以及跨境基礎設施，以支援經濟發展和提升人類福祉，並聚焦提供所有人可負擔且公平的管道。<br>
                         9.2　發展包容性與永續的工業，2030年前，各國工業在就業和國內生產毛額（以下簡稱GDP）中的佔比，依據國情顯著增長，尤其最低度開發國家（以下簡稱LDCs）的工業就業和GDP佔比應翻倍成長。<br>
@@ -232,7 +247,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs10">
-                    <li>10.減少不平等<br><img src="sdgs10.jpg" height="107.2" width="160"/>「減少國內及國家間的不平等」</li>
+                    <li>10.減少不平等<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-616695f412aed.jpg" height="107.2" width="160"/>「減少國內及國家間的不平等」</li>
                     <div class="content" id="content-sdgs10">
                         10.1　2030年前，以高於全國平均水準之速率，逐步實現並維持最底層40%人口的所得成長。<br>
                         10.2　2030年前，增強並促進所有人的社會、經濟和政治包容性，無論其年齡、性別、身心障礙、種族、族群、族裔、宗教、經濟或其他任何區別。<br>
@@ -247,7 +262,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs11">
-                    <li>11."可持續城市與社區<br><img src="sdgs11.jpg" height="107.2" width="160"/>「建構具包容、安全、韌性及永續特質的城市與鄉村」</li>
+                    <li>11."可持續城市與社區<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-61669cb71d061.jpg" height="107.2" width="160"/>「建構具包容、安全、韌性及永續特質的城市與鄉村」</li>
                     <div class="content" id="content-sdgs11">
                         11.1　2030年前，確保所有的人都可獲得適當、安全、可負擔的住宅與基本服務，並改善貧民窟。<br>
                         11.2　2030年前，為所有人提供安全、可負擔、易於使用及永續的交通運輸系統，改善道路安全，尤其是擴大公共運輸，特別注意弱勢族群、婦女、兒童、身心障礙者及老年人的需求。<br>
@@ -262,7 +277,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs12">
-                    <li>12.負責任的消費與生產<br><img src="sdgs12.jpg" height="107.2" width="160"/>「促進綠色經濟，確保永續消費及生產模式」</li>
+                    <li>12.負責任的消費與生產<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-6166a42b4daec.jpg" height="107.2" width="160"/>「促進綠色經濟，確保永續消費及生產模式」</li>
                     <div class="content" id="content-sdgs12">
                         12.1　由已開發國家帶頭，動員所有國家執行「永續消費與生產十年計畫架構（10YEP）」，並考量開發中國家的發展和能力。<br>
                         12.2　2030年前，實現自然資源的永續管理以及高效使用。<br>
@@ -278,7 +293,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs13">
-                    <li>13.氣候行動<br><img src="sdgs13.jpg" height="107.2" width="160"/>「完備減緩調適行動，以因應氣候變遷及其影響」</li>
+                    <li>13.氣候行動<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-6166b5d0bf565.jpg" height="107.2" width="160"/>「完備減緩調適行動，以因應氣候變遷及其影響」</li>
                     <div class="content" id="content-sdgs13">
                         13.1　強化各國對氣候變遷浩劫、自然災害的抵禦和適應能力。<br>
                         13.2　將氣候變遷因應措施納入國家政策、策略和規劃當中。<br>
@@ -288,7 +303,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs14">
-                    <li>14.水下生物<br><img src="sdgs14.jpg" height="107.2" width="160"/>「保育及永續利用海洋生態系，以確保生物多樣性並防止海洋環境劣化」</li>
+                    <li>14.水下生物<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-6168f29335215.jpg" height="107.2" width="160"/>「保育及永續利用海洋生態系，以確保生物多樣性並防止海洋環境劣化」</li>
                     <div class="content" id="content-sdgs14">
                         14.1　2025年前，預防及大幅減少各類型的海洋污染，尤其來自陸上活動，包括海洋廢棄物和營養物污染。<br>
                         14.2　2020年前，永續管理及保護海洋和海岸生態系統，避免產生重大負面影響，包括加強海洋恢復力，並採取復原行動，使海洋保持健康、物產豐饒。<br>
@@ -303,7 +318,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs15">
-                    <li>15.陸地生物<br><img src="sdgs15.jpg" height="107.2" width="160"/>「保育及永續利用陸域生態系，確保生物多樣性並防止土地劣化」</li>
+                    <li>15.陸地生物<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-6168f8c4d4e0c.jpg" height="107.2" width="160"/>「保育及永續利用陸域生態系，確保生物多樣性並防止土地劣化」</li>
                     <div class="content" id="content-sdgs15">
                         15.1　2020年前，根據國際協議的義務，確保陸地與內陸淡水生態系統及其功能運作，獲得保護、復原和永續利用，尤其是森林、濕地、山脈和旱地。<br>
                         15.2　2020年前，促進落實各式森林的永續管理，終止毀林、恢復退化森林，以及大幅增加全球造林和再造林。<br>
@@ -320,7 +335,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs16">
-                    <li>16.和平、正義與強大機構<br><img src="sdgs16.jpg" height="107.2" width="160"/>「促進和平多元的社會，確保司法平等，建立具公信力且廣納民意的體系」</li>
+                    <li>16.和平、正義與強大機構<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-6169026f07a14.jpg" height="107.2" width="160"/>「促進和平多元的社會，確保司法平等，建立具公信力且廣納民意的體系」</li>
                     <div class="content" id="content-sdgs16">
                         16.1　大幅減少各地各種形式的暴力，以及暴力相關事件的死亡率。<br>
                         16.2　終結對兒童進行虐待、剝削、販賣以及一切形式的暴力和酷刑。<br>
@@ -337,7 +352,7 @@ footer
                     </div>
                 </div>
                 <div class="toggle-box" id="sdgs17">
-                    <li>17.夥伴關係促進目標達成<br><img src="sdgs17.jpg" height="107.2" width="160"/>「建立多元夥伴關係，協力促進永續願景」</li>
+                    <li>17.夥伴關係促進目標達成<br><img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/article/202110/article-616908ae8d4ab.jpg" height="107.2" width="160"/>「建立多元夥伴關係，協力促進永續願景」</li>
                     <div class="content" id="content-sdgs17">
                         17.1　強化國內資源動員，包括透過向開發中國家提供國際支援，改善其國內稅收、和其他收益取得能力。<br>
                         17.2　已開發國家充分履行其官方發展援助承諾，包括向開發中國家提供國民所得毛額（GNI）中的0.7％作為政府開發援助（ODA），以及向最低度開發國家（以下簡稱LDCs）提供國民所得毛額中的0.15至0.2％為開發援助。鼓勵開發援助提供方設定目標，提供佔國民所得毛額至少0.2%的開發援助給LDCs。<br>
@@ -388,6 +403,7 @@ footer
             <h2>如何參與？</h2>
             <p>每個人都可以在日常生活中為SDGs做出貢獻，例如：減少塑料使用、支持可持續產品、參加社區服務等。</p>
         </section>
+        <a href="/" class="button welcome">GO BACK</a>
     </main>
     <footer>
         <p>&copy; 2024 SDGs介紹</p>
