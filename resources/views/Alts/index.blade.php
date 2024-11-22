@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -153,8 +156,6 @@
         </tbody>
     </table>
 
-    <!-- 左下角的「返回選擇畫面」按鈕 -->
-    <a href="http://127.0.0.1:8000/1" class="back-btn">返回選擇畫面</a>
 
 </body>
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>多色泡泡背景</title>
+    <title>頁面選擇</title>
 
     <style>
         * {
@@ -20,56 +20,43 @@
 
         body {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             background-color: #fff;
             min-height: 100vh;
             position: relative;
-            overflow: hidden; /* 防止泡泡超出邊界 */
+            overflow: hidden;
         }
 
-        /* 創建泡泡 */
-        .bubble {
-            position: absolute;
-            bottom: -150px; /* 初始位置在畫面底部之外 */
-            border-radius: 50%;
-            animation: float 4s infinite ease-in-out; /* 縮短動畫持續時間，讓泡泡漂浮得更快 */
-            opacity: 0; /* 初始時不可見 */
-        }
-
-        /* 不同大小的泡泡 */
-        .bubble1 { width: 100px; height: 100px; background-color: rgba(255, 99, 71, 0.7); } /* 番茄紅 */
-        .bubble2 { width: 120px; height: 120px; background-color: rgba(100, 149, 237, 0.7); } /* 藍色 */
-        .bubble3 { width: 90px; height: 90px; background-color: rgba(34, 193, 195, 0.7); } /* 青色 */
-        .bubble4 { width: 110px; height: 110px; background-color: rgba(255, 165, 0, 0.7); } /* 橙色 */
-        .bubble5 { width: 95px; height: 95px; background-color: rgba(144, 238, 144, 0.7); } /* 淺綠色 */
-        .bubble6 { width: 130px; height: 130px; background-color: rgba(238, 130, 238, 0.7); } /* 紫色 */
-
-        /* 動畫讓泡泡漂浮 */
-        @keyframes float {
-            0% {
-                transform: translateY(0) scale(1); /* 從底部開始 */
-                opacity: 1;
-            }
-            50% {
-                transform: translateY(-100vh) scale(1.2); /* 向上漂浮並放大 */
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-200vh) scale(1); /* 更高的地方，消失 */
-                opacity: 0;
-            }
+        /* header 樣式 */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #27ae60; /* 可以更改顏色 */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            z-index: 1000;
         }
 
         /* 容器部分 */
         .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             background-color: rgba(255, 255, 255, 0.8);
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            position: relative;
-            z-index: 1; /* 保證內容在泡泡之上 */
+            position: absolute; /* 使其固定於頁面 */
+            top: 50%; /* 垂直居中 */
+            left: 50%; /* 水平居中 */
+            transform: translate(-50%, -50%); /* 使用 transform 來確保真正的居中 */
+            z-index: 1; /* 保證內容在其他元素之上 */
         }
 
         .btn-container {
@@ -91,27 +78,75 @@
         .btn:hover {
             background-color: #1e4c8f;
         }
+
+        /* footer 樣式 */
+        footer {
+            position: relative;
+            margin-top: auto; /* 這行確保 footer 被推到頁面底部 */
+            background-color: #27ae60;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* 創建泡泡 */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out, bounce 0.5s infinite ease-in-out;
+            opacity: 0.8;
+        }
+
+        /* 不同顏色和大小的泡泡 */
+        .bubble1 { width: 60px; height: 60px; background-color: rgba(255, 228, 225, 0.7); } /* 淺粉色 */
+        .bubble2 { width: 50px; height: 50px; background-color: rgba(173, 216, 230, 0.7); } /* 淺藍色 */
+        .bubble3 { width: 70px; height: 70px; background-color: rgba(144, 238, 144, 0.7); } /* 淺綠色 */
+        .bubble4 { width: 80px; height: 80px; background-color: rgba(255, 255, 224, 0.7); } /* 淺黃色 */
+        .bubble5 { width: 55px; height: 55px; background-color: rgba(255, 182, 193, 0.7); } /* 淺紅色 */
+        .bubble6 { width: 75px; height: 75px; background-color: rgba(221, 160, 221, 0.7); } /* 淺紫色 */
+        .bubble7 { width: 65px; height: 65px; background-color: rgba(240, 248, 255, 0.7); } /* 淺藍白色 */
+        .bubble8 { width: 60px; height: 60px; background-color: rgba(255, 239, 178, 0.7); } /* 淺黃色 */
+        .bubble9 { width: 70px; height: 70px; background-color: rgba(255, 240, 245, 0.7); } /* 淺粉紫 */
+        .bubble10 { width: 50px; height: 50px; background-color: rgba(224, 255, 255, 0.7); } /* 淺綠藍 */
+        .bubble11 { width: 80px; height: 80px; background-color: rgba(255, 255, 255, 0.7); } /* 白色 */
+        .bubble12 { width: 65px; height: 65px; background-color: rgba(240, 255, 240, 0.7); } /* 淺綠 */
+        .bubble13 { width: 60px; height: 60px; background-color: rgba(250, 240, 230, 0.7); } /* 淺米色 */
+        .bubble14 { width: 75px; height: 75px; background-color: rgba(255, 222, 173, 0.7); } /* 淺橙色 */
+        .bubble15 { width: 55px; height: 55px; background-color: rgba(255, 218, 185, 0.7); } /* 淺桃色 */
+
+        /* 泡泡浮動動畫 */
+        @keyframes float {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+            100% {
+                transform: translateX(calc(100vw - 100%)) translateY(calc(100vh - 100%));
+            }
+        }
+
+        /* 泡泡反彈動畫 */
+        @keyframes bounce {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
     </style>
 </head>
 
 <body>
+    <!-- 載入 header -->
+    @include('header')
 
-    <!-- 多個泡泡元素，會分布在頁面底端漂浮 -->
-    <div class="bubble bubble1" style="left: 5%; animation-delay: 0s;"></div>
-    <div class="bubble bubble2" style="left: 15%; animation-delay: 0.5s;"></div>
-    <div class="bubble bubble3" style="left: 25%; animation-delay: 1s;"></div>
-    <div class="bubble bubble4" style="left: 35%; animation-delay: 1.5s;"></div>
-    <div class="bubble bubble5" style="left: 45%; animation-delay: 2s;"></div>
-    <div class="bubble bubble6" style="left: 55%; animation-delay: 2.5s;"></div>
-    <div class="bubble bubble1" style="left: 65%; animation-delay: 3s;"></div>
-    <div class="bubble bubble2" style="left: 75%; animation-delay: 3.5s;"></div>
-    <div class="bubble bubble3" style="left: 85%; animation-delay: 4s;"></div>
-    <div class="bubble bubble4" style="left: 95%; animation-delay: 4.5s;"></div>
-    <div class="bubble bubble5" style="left: 10%; animation-delay: 5s;"></div>
-    <div class="bubble bubble6" style="left: 20%; animation-delay: 5.5s;"></div>
-
+    <!-- 主要內容 -->
     <div class="content">
-        <h1>選擇頁面</h1>
+        <h2>選擇頁面</h2>
         <p></p>
         <div class="btn-container">
             <a href="http://127.0.0.1:8000/Alt" class="btn">前往 自行車道</a>
@@ -119,6 +154,27 @@
         </div>
     </div>
 
+    <!-- 泡泡元素 -->
+    <div class="bubble bubble1" style="top: 30%; left: 20%;"></div>
+    <div class="bubble bubble2" style="top: 10%; left: 50%;"></div>
+    <div class="bubble bubble3" style="top: 70%; left: 80%;"></div>
+    <div class="bubble bubble4" style="top: 40%; left: 60%;"></div>
+    <div class="bubble bubble5" style="top: 60%; left: 30%;"></div>
+    <div class="bubble bubble6" style="top: 20%; left: 70%;"></div>
+    <div class="bubble bubble7" style="top: 50%; left: 10%;"></div>
+    <div class="bubble bubble8" style="top: 15%; left: 80%;"></div>
+    <div class="bubble bubble9" style="top: 55%; left: 40%;"></div>
+    <div class="bubble bubble10" style="top: 35%; left: 30%;"></div>
+    <div class="bubble bubble11" style="top: 45%; left: 20%;"></div>
+    <div class="bubble bubble12" style="top: 25%; left: 60%;"></div>
+    <div class="bubble bubble13" style="top: 75%; left: 50%;"></div>
+    <div class="bubble bubble14" style="top: 65%; left: 80%;"></div>
+    <div class="bubble bubble15" style="top: 10%; left: 40%;"></div>
+
+    <!-- 載入 footer -->
+    <footer>
+        <p>@include('footer')</p>
+    </footer>
 </body>
 
 </html>
