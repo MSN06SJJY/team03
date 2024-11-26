@@ -30,4 +30,4 @@ Route::get(
     }
 );
 
-Route::get('/bikepath',[BikePathController::class, 'index']);
+Route::get('bikepath',[BikePathController::class, 'index'])->name('bikepath.index');
