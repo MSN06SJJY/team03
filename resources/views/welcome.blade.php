@@ -142,7 +142,7 @@
 
 <body>
     <!-- 載入 header -->
-    @include('header')
+    <header><h1>歡迎</h1></header>
 
     <!-- 主要內容 -->
     <div class="content">
@@ -173,8 +173,8 @@
 
     <!-- 載入 footer -->
     <footer>
-        <p>@include('footer')</p>
+        <p>版權 &copy; 2024 可持續發展目標介紹</p>
+        <a href="http://127.0.0.1:8000/1" class="btn">返回選擇畫面</a>
     </footer>
 </body>
-
 </html>

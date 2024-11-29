@@ -14,26 +14,18 @@ use App\Http\Controllers\AtlController;
 |
 */
 
-Route::get('Alt', [AtlController::class, 'index']);
+Route::get('Alt', [AtlController::class, 'index'])->name('Alts.index');
 
 Route::get(
-    '/sdg',
+    'sdg',
     function () {
         return view('intro_sdg');
     }
 );
 
 Route::get(
-    '/1',
+    '1',
     function () {
         return view('welcome');
     }
 );
-
-Route::get(
-    '/ss',
-    function () {
-        return view('app');
-    }
-);
-

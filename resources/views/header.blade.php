@@ -1,130 +1,44 @@
-<header>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>可持續發展目標（SDGs）</title>
-        <style>
-            body {
-                font-family: 'Arial', sans-serif;
-                margin: 0;
-                padding: 0;
-                line-height: 1.6;
-                background-color: #f9f9f9;
-                color: #2c3e50;
-            }
-    
-            header {
-                background: #27ae60;
-                color: #ffffff;
-                padding: 20px 0;
-                text-align: center;
-                background-image: url('https://example.com/your-leaf-pattern.png'); /* 替換為實際的葉子圖案 */
-                background-size: cover;
-            }
-    
-            h1 {
-                margin: 0;
-                font-weight: bold;
-            }
-    
-            main {
-                padding: 20px;
-                max-width: 800px;
-                margin: auto;
-            }
-    
-            section {
-                margin-bottom: 20px;
-                background: #ffffff;
-                padding: 15px;
-                border: 1px solid #dcdcdc;
-                border-radius: 5px;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                position: relative;
-            }
-    
-            h2 {
-                color: #27ae60;
-                border-bottom: 2px solid #dcdcdc;
-                padding-bottom: 5px;
-                font-size: 1.5em; /* 放大字體 */
-            }
-    
-            footer {
-                text-align: center;
-                padding: 10px 0;
-                background: #27ae60;
-                color: #ffffff;
-                position: relative;
-                bottom: 0;
-                width: 100%;
-            }
-    
-            ul {
-                list-style-type: none;
-                padding: 0;
-            }
-    
-            li {
-                margin: 10px 0;
-                padding: 10px;
-                border-left: 5px solid #27ae60;
-                border-radius: 3px;
-                transition: background 0.3s;
-                position: relative;
-                font-weight: bold; /* 設為粗體 */
-            }
-    
-            li:hover {
-                background: #eafaf1;
-            }
-    
-            .style1 {
-                background: #dff0d8;
-            }
-    
-            .style2 {
-                background: #fcf8e3;
-            }
-    
-            .style3 {
-                background: #f2dede;
-            }
-    
-            .style4 {
-                background: #d9edf7;
-            }
-    
-            .style5 {
-                background: #f5f5f5;
-            }
-    
-            .example {
-                font-size: 0.8em; /* 縮小字形 */
-                position: absolute;
-                bottom: 10px;
-                right: 10px;
-                color: #555555;
-                opacity: 0.7;
-            }
-    
-            .btn {
-                padding: 12px 25px;
-                background-color: #2b6cb0;
-                color: white;
-                text-decoration: none;
-                border-radius: 5px;
-                font-size: 16px;
-                margin-top: 20px;
-                display: inline-block;
-                transition: background-color 0.3s;
-            }
-    
-            .btn:hover {
-                background-color: #1e4c8f;
-            }
-        </style>
-    </head>
-    <h1>可持續發展目標（SDGs）</h1>
-    <p>聯合國於2015年制定的17項全球性目標，旨在促進社會、經濟及環境的可持續發展。</p>
-</header>
+<div>
+    <header>
+        <h1>自行車道資訊</h1>
+    </header>
+</div>
+
+<hr>
+
+<style>
+    /* 設定 header 固定在頁面最上方 */
+    header {
+        position: fixed; /* 固定在頁面最上方 */
+        top: 0; /* 緊貼頁面頂部 */
+        left: 0;
+        width: 100%; /* 設定寬度為100% */
+        text-align: center; /* 讓標題居中 */
+        padding: 40px 0; /* 增加上下內邊距來讓標題顯得突出 */
+        background-color: #4CAF50; /* 設定背景顏色 */
+        color: white; /* 設定標題的字體顏色為白色 */
+        z-index: 1000; /* 確保標題區塊位於最上層 */
+    }
+
+    /* 設定 hr 的樣式，讓分隔線看起來更整齊 */
+    hr {
+        border: 0;
+        border-top: 2px solid #4CAF50; /* 使用與標題相同的顏色 */
+        margin-top: 10px; /* 給分隔線一些間距 */
+    }
+
+    body {
+        margin-top: 200px; /* 留出空間給 header，避免被遮擋 */
+    }
+
+    /* 隱藏所有內容 */
+    .content {
+        display: none;
+    }
+</style>
+
+<!-- 假設這是頁面主要內容區域 -->
+<div class="content">
+    <!-- 這部分的內容將不會顯示 -->
+    <p>這部分頁面內容將不會顯示。</p>
+</div>
