@@ -15,7 +15,7 @@ class AtlController extends Controller
     public function index()
     {
         $articles = Altss::all();
-        return view('Alts.index',compact('articles'));
+        return view('Alts.index')->with('articles',$articles);
     }
 
     /**
@@ -47,7 +47,8 @@ class AtlController extends Controller
      */
     public function show($id)
     {
-        //
+        $Alt = Altss::findOrFail($id);
+        return view('Alts.show')->with('Alt',$Alt);
     }
 
     /**

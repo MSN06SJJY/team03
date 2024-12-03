@@ -29,3 +29,6 @@ Route::get(
         return view('welcome');
     }
 );
+
+Route::get('At/{id}', [AtlController::class, 'show'])->where('id','[0-9]+')->name('Alts.index');
+Route::get('At/{id}/edit', [AtlController::class, 'edit'])->where('id','[0-9]+')->name('Alts.edit');
