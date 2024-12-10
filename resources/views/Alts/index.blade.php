@@ -9,6 +9,7 @@
                     <th>所在區域</th>
                     <th>周邊景點</th>
                     <th>修改</th>
+                    <th>刪除</th>
                 </tr>
             </thead>
             <style>
@@ -90,6 +91,13 @@
 
                         <td><a href="{{ route('Alts.index', ['id' => $Alt->id]) }}">顯示</a></td>
                         <td><a href="{{ route('Alts.edit', ['id' => $Alt->id]) }}">修改</a></td>
+                        <td>
+                            <from action="{{ url('/At/delete',['id' => $Alt->id]) }}" method="post">
+                                <input class="btn btn-default" type="submit" value="刪除" />
+                                @method('delete')
+                                @csrf
+                            </from>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
