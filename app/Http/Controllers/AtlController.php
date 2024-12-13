@@ -25,7 +25,7 @@ class AtlController extends Controller
      */
     public function create()
     {
-        //
+        return view("Alts.create");
     }
 
     /**
@@ -82,8 +82,10 @@ class AtlController extends Controller
      */
     public function destroy($id)
     {
+        
         $Alt = Altss::findOrFail($id);
         $Alt->delete();
         return redirect('Alt');
     }
 }
+ 
