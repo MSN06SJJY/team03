@@ -57,7 +57,7 @@
     <div class="container">
         <h1>Welcome</h1>
         <a href="/sdgs" class="button sdgs">SDGs</a>
-        <a href="/bikepath" class="button">Bikepath</a>
+        <a href="/bikepaths" class="button">Bikepath</a>
     </div>
 </body>
 </html>

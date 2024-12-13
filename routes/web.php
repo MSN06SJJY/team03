@@ -23,11 +23,25 @@ Route::get(
 );
 
 Route::get(
-    '/sdgs', 
+    'sdgs', 
     function () 
     {
     return view('intro_sdgs');
     }
 );
 
-Route::get('bikepath',[BikePathController::class, 'index'])->name('bikepath.index');
+Route::get('bikepaths',[BikePathController::class, 'index'])
+    ->name('bikepaths.index');
+Route::get('bikepaths/create',[BikePathController::class, 'create'])
+    ->name('bikepaths.create');
+Route::post('bikepaths/store',[BikePathController::class, 'create'])
+    ->name('bikepaths.store');
+Route::get('bikepaths/{id}',[BikePathController::class, 'show'])
+    ->where('id','[0-9]+')
+    ->name('bikepaths.show');
+Route::get('bikepaths/{id}/edit',[BikePathController::class, 'edit'])
+    ->where('id','[0-9]+')
+    ->name('bikepaths.edit');
+Route::delete('bikepaths/delete/{id}',[BikePathController::class, 'destroy'])
+    ->where('id','[0-9]+')
+    ->name('bikepaths.destroy');

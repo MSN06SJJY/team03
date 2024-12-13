@@ -16,7 +16,8 @@ class BikePathController extends Controller
     {
         //
         $bikepaths = BikePath::all();
-        return view('bikepath.index', compact('bikepaths'));
+        //return view('bikepath.index', compact('bikepaths'));
+        return view('bikepaths.index')->with('bikepaths', $bikepaths);
     }
 
     /**
@@ -27,6 +28,7 @@ class BikePathController extends Controller
     public function create()
     {
         //
+        return view('bikepaths.create');
     }
 
     /**
@@ -38,6 +40,15 @@ class BikePathController extends Controller
     public function store(Request $request)
     {
         //
+        $data = $request->only([
+            'bike_path_name',
+            'district',
+            'length',
+            'nearby_attractions'
+        ]);
+
+        $bikepath = BikePath::create($data);
+        return redirect('/bikepaths');
     }
 
     /**
@@ -49,6 +60,8 @@ class BikePathController extends Controller
     public function show($id)
     {
         //
+        $bikepath = BikePath::findOrFail($id);
+        return view('bikepaths.show')->with('bikepath',$bikepath);
     }
 
     /**
@@ -83,5 +96,8 @@ class BikePathController extends Controller
     public function destroy($id)
     {
         //
+        $bikepath = BikePath::findOrFail($id);
+        $bikepath ->delete();
+        return redirect('/bikepaths');
     }
 }

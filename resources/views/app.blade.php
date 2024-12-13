@@ -91,7 +91,7 @@
 
 <div>    
     @include('header')
-    @yield('bikepath.index')
+    @yield('bikepaths.index')
     <a href="/" class="button welcome">GO BACK</a>
     @include('footer')
 </div>
