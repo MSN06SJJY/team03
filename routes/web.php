@@ -27,10 +27,11 @@ Route::get(
     '1',
     function () {
         return view('welcome');
-    }
+    } 
 );
 
 Route::get('At/{id}', [AtlController::class, 'show'])->where('id', '[0-9]+')->name('Alts.index');
 Route::get('At/{id}/edit', [AtlController::class, 'edit'])->where('id', '[0-9]+')->name('Alts.edit');
 Route::delete('At/delete/{id}', [AtlController::class, 'destroy'])->where('id', '[0-9]+')->name('Alts.destroy');
 Route::get('At/create', [AtlController::class, 'create'])->name('Alts.create');
+Route::post('At/store', [AtlController::class, 'store'])->name('Alts.store');

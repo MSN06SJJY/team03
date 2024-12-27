@@ -36,7 +36,14 @@ class AtlController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->only([
+            'bikeway_name',
+            'districts',
+            'length',
+            'surrounding_attractions',
+        ]);
+        $Al = Altss::create($data);
+        return redirect('Alts');
     }
 
     /**
