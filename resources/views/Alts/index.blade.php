@@ -1,7 +1,8 @@
 @extends('app')
 @section('Alts.index')
     <div>
-        <a href={{ route('Alts.create')}}>新增</a>
+        <a href="{{ route('Alts.create') }}" class="btn btn-default">新增</a>
+
         <table>
             <thead>
                 <tr>
