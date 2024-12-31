@@ -36,15 +36,19 @@ class AtlController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->only([
-            'bikeway_name',
-            'districts',
-            'length',
-            'surrounding_attractions',
-        ]);
-        $Al = Altss::create($data);
-        return redirect('Alts');
+        $bikeway_name = $request ->input('bikeway_name');
+        $districts = $request ->input('districts');
+        $length = $request ->input('length');
+        $surrounding_attractions = $request ->input('surrounding_attractions');
+
+        $Alts = Altss::create([
+            'bikeway_name'=>$bikeway_name,
+            'districts'=>$districts,
+            'length'=>$length,
+            'surrounding_attractions'=>$surrounding_attractions]);
+            return redirect('Alt');
     }
+
 
     /**
      * Display the specified resource.
@@ -66,7 +70,8 @@ class AtlController extends Controller
      */
     public function edit($id)
     {
-        //
+        $Alt = Altss::findOrFail($id);
+        return view("Alts.edit")->with('Alt',$Alt);
     }
 
     /**

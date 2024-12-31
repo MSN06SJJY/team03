@@ -9,4 +9,12 @@ class Altss extends Model
 {
     use HasFactory;
     protected $table = "articles";
+
+
+    protected $fillable = [
+        'bikeway_name',
+        'districts',
+        'length',
+        'surrounding_attractions',
+    ];
 }

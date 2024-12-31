@@ -85,21 +85,35 @@
             
             <tbody>
                 @foreach ($articles as $index => $Alt)
-                    <tr>
-                        <td>{{ $Alt->bikeway_name }}</td>
-                        <td>{{ $Alt->length }}</td>
-                        <td>{{ $Alt->districts }}</td>
-
-                        <td><a href="{{ route('Alts.index', ['id' => $Alt->id]) }}">顯示</a></td>
-                        <td><a href="{{ route('Alts.edit', ['id' => $Alt->id]) }}">修改</a></td>
-                        <td>
-                            <form action="{{ url('/At/delete',['id' => $Alt->id]) }}" method="post">
-                                <input class="btn btn-default" type="submit" value="刪除" />
-                                @method('delete')
-                                @csrf
-                            </form>
-                        </td>
-                    </tr>
+                <tr>
+                    <td>{{ $Alt->bikeway_name }}</td>
+                    <td>{{ $Alt->length }}</td>
+                    <td>{{ $Alt->districts }}</td>
+                
+                    <!-- 顯示按鈕 -->
+                    <td>
+                        <form action="{{ route('Alts.index', ['id' => $Alt->id]) }}" method="get">
+                            <input class="btn btn-default" type="submit" value="顯示" />
+                        </form>
+                    </td>
+                    
+                    <!-- 修改按鈕 -->
+                    <td>
+                        <form action="{{ route('Alts.edit', ['id' => $Alt->id]) }}" method="get">
+                            <input class="btn btn-default" type="submit" value="修改" />
+                        </form>
+                    </td>
+                
+                    <!-- 刪除按鈕 -->
+                    <td>
+                        <form action="{{ url('/At/delete',['id' => $Alt->id]) }}" method="post">
+                            <input class="btn btn-default" type="submit" value="刪除" />
+                            @method('delete')
+                            @csrf
+                        </form>
+                    </td>
+                </tr>
+                
                 @endforeach
             </tbody>
         </table>
