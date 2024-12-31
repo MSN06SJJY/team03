@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\BikePath;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
+use App\Http\Requests\CreateArticleRequest;
 
 class BikePathController extends Controller
 {
@@ -37,7 +38,7 @@ class BikePathController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateArticleRequest $request)
     {
         //
         $data = $request->only([
@@ -46,7 +47,6 @@ class BikePathController extends Controller
             'length',
             'nearby_attractions'
         ]);
-
         $bikepath = BikePath::create($data);
         return redirect('/bikepaths');
     }
@@ -73,6 +73,8 @@ class BikePathController extends Controller
     public function edit($id)
     {
         //
+        $bikepath = BikePath::findOrFail($id);
+        return view('bikepaths.edit') ->with('bikepath',$bikepath);
     }
 
     /**
@@ -82,9 +84,18 @@ class BikePathController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CreateArticleRequest $request, $id)
     {
-        //
+        $bikepath = BikePath::findOrFail($id);
+        $data = $request -> only([
+            'bike_path_name',
+            'district',
+            'length',
+            'nearby_attractions'
+        ]);
+        $bikepath -> fill($data);
+        $bikepath -> save();
+    return redirect('/bikepaths');
     }
 
     /**

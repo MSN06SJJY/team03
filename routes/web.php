@@ -34,7 +34,7 @@ Route::get('bikepaths',[BikePathController::class, 'index'])
     ->name('bikepaths.index');
 Route::get('bikepaths/create',[BikePathController::class, 'create'])
     ->name('bikepaths.create');
-Route::post('bikepaths/store',[BikePathController::class, 'create'])
+Route::post('bikepaths/store',[BikePathController::class, 'store'])
     ->name('bikepaths.store');
 Route::get('bikepaths/{id}',[BikePathController::class, 'show'])
     ->where('id','[0-9]+')
@@ -45,3 +45,5 @@ Route::get('bikepaths/{id}/edit',[BikePathController::class, 'edit'])
 Route::delete('bikepaths/delete/{id}',[BikePathController::class, 'destroy'])
     ->where('id','[0-9]+')
     ->name('bikepaths.destroy');
+Route::patch('bikepaths/{id}/update',[BikePathController::class, 'update'])
+    ->name('bikepaths.update');
