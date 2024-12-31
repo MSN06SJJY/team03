@@ -32,6 +32,7 @@ Route::get(
 
 Route::get('At/{id}', [AtlController::class, 'show'])->where('id', '[0-9]+')->name('Alts.index');
 Route::get('At/{id}/edit', [AtlController::class, 'edit'])->where('id', '[0-9]+')->name('Alts.edit');
+Route::patch('At/{id}/update', [AtlController::class, 'update'])->where('id', '[0-9]+')->name('Alts.update');
 Route::delete('At/delete/{id}', [AtlController::class, 'destroy'])->where('id', '[0-9]+')->name('Alts.destroy');
 Route::get('At/create', [AtlController::class, 'create'])->name('Alts.create');
 Route::post('At/store', [AtlController::class, 'store'])->name('Alts.store');

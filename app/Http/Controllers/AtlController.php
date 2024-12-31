@@ -83,8 +83,22 @@ class AtlController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $Alt = Altss::findOrFail($id);
+
+        $data = $request->only([
+            'bikeway_name',
+            'districts',
+            'length',
+            'surrounding_attractions',
+        ]);
+
+        $Alt->fill($data);
+        $Alt->save();
+        return redirect('Alt');
     }
+
+        
+
 
     /**
      * Remove the specified resource from storage.
