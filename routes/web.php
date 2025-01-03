@@ -47,3 +47,6 @@ Route::delete('bikepaths/delete/{id}',[BikePathController::class, 'destroy'])
     ->name('bikepaths.destroy');
 Route::patch('bikepaths/{id}/update',[BikePathController::class, 'update'])
     ->name('bikepaths.update');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
