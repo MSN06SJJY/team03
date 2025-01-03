@@ -24,11 +24,22 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'bikeway_name' => 'required|string|min:2|max:191', // 自行车道名称：必填，字符串，长度在 2 到 191 之间
-            'districts' => 'required|string|max:191',           // 行政区：必填，字符串，最大长度 191
+            'bikeway_name' => 'required', // 自行车道名称：必填
+            'districts' => 'required',           // 行政区：必填
             'length' => 'required|numeric|min:0',                // 长度：必填，数字，最小值为 0
-            'surrounding_attractions' => 'required|string|max:191', 
+            'surrounding_attractions' => 'required'
         ];
     }
-
+    public function messages()
+    {
+        return [
+            "bikeway_name.required" => "自行車道名稱 為必填",
+            "districts.required" => "行政區 為必填",
+            "length.required" => "长度：必填",
+            "length.numeric" => "数字",
+            "length.min" => "長度的最小值為 0",
+            "surrounding_attractions.required" => "周邊景點 為必填",
+        ];
+    }
+        
 }

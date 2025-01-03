@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\CreateRequest;
 use App\Models\Altss;
 
 class AtlController extends Controller
@@ -34,8 +34,9 @@ class AtlController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateRequest $request)
     {
+        
         $bikeway_name = $request ->input('bikeway_name');
         $districts = $request ->input('districts');
         $length = $request ->input('length');
