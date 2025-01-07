@@ -7,6 +7,25 @@ use Illuminate\Support\Facades\Gate;
 
 class AuthServiceProvider extends ServiceProvider
 {
+
+   public function boot()
+   {
+      $this->registerPolicies();
+
+      Gate::define('admin',function ($user){
+          return $user->role ==User::ROLE_ADMIN;
+      });
+
+      Gate::define('manager',function ($user) {
+          return $user->role === User::ROLE_MANAGER;
+
+      });
+
+      Gate::define('user',function ($user) {
+          return $user->role === User::ROLE_USER;
+      });
+    }
+
     /**
      * The policy mappings for the application.
      *
@@ -21,10 +40,5 @@ class AuthServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
-        $this->registerPolicies();
 
-        //
-    }
 }

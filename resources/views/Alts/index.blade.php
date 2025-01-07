@@ -1,8 +1,23 @@
 @extends('app')
 @section('Alts.index')
     <div>
+        
+            @if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                        <a href="{{ url('/home')}}" class="text-sm text-gray-700 underline">Home</a>
+                    @else
+                        <a href="{{ route('login')}}" class="text-sm text-gray-700 underline">Login</a>
+        
+                        @if (Route::has('register'))
+                            <a href="{{ route('register')}}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        @endif
+                    @endif
+                </div>
+            @endif
+        @can('admin')
         <a href="{{ route('Alts.create') }}" class="btn btn-default">新增</a>
-
+        @endcan
         <table>
             <thead>
                 <tr>
@@ -10,8 +25,11 @@
                     <th>長度 (km)</th>
                     <th>所在區域</th>
                     <th>周邊景點</th>
+                    @can('admin')
+                    @elsecan('mmanager')
                     <th>修改</th>
                     <th>刪除</th>
+                    @endcan
                 </tr>
             </thead>
             <style>
@@ -97,7 +115,8 @@
                             <input class="btn btn-default" type="submit" value="顯示" />
                         </form>
                     </td>
-                    
+                    @can('admin')
+                    @elsecan('manager')
                     <!-- 修改按鈕 -->
                     <td>
                         <form action="{{ route('Alts.edit', ['id' => $Alt->id]) }}" method="get">
@@ -113,6 +132,7 @@
                             @csrf
                         </form>
                     </td>
+                    @endcan
                 </tr>
                 
                 @endforeach

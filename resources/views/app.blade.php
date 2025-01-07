@@ -9,7 +9,7 @@
 
 </head>
 
-<body>
+<body class="antialiased">
    @include('header')
     <!-- 主要內容區域 -->
     <div class="content">
@@ -21,6 +21,7 @@
 
     <!-- 頁尾區塊，顯示在最底部 -->
     @include('footer')
+
 </body>
 
 </html>

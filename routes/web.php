@@ -36,3 +36,7 @@ Route::patch('At/{id}/update', [AtlController::class, 'update'])->where('id', '[
 Route::delete('At/delete/{id}', [AtlController::class, 'destroy'])->where('id', '[0-9]+')->name('Alts.destroy');
 Route::get('At/create', [AtlController::class, 'create'])->name('Alts.create');
 Route::post('At/store', [AtlController::class, 'store'])->name('Alts.store');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
