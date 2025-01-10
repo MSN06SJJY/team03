@@ -26,6 +26,18 @@
                         </div>
 
                         <div class="row mb-3">
+                            <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Role') }}</label>
+
+                            <div class="col-md-6">
+                                <select name="role" id="role">
+                                    <option value="{{ \App\Models\User::ROLE_USER }}">使用者</option>
+                                    <option value="{{ \App\Models\User::ROLE_MANAGER }}">管理者</option>
+                                    <option value="{{ \App\Models\User::ROLE_ADMIN }}">管理員</option>
+                                </select>
+                            </div>    
+                        </div>
+
+                        <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
