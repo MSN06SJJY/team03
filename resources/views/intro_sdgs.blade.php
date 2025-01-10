@@ -403,7 +403,7 @@ footer
             <h2>如何參與？</h2>
             <p>每個人都可以在日常生活中為SDGs做出貢獻，例如：減少塑料使用、支持可持續產品、參加社區服務等。</p>
         </section>
-        <a href="/" class="button welcome">GO BACK</a>
+        <a href="/" class="button welcome">回到上一頁</a>
     </main>
     <footer>
         <p>&copy; 2024 SDGs介紹</p>

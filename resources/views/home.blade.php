@@ -15,6 +15,8 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                    <a href="/bikepaths" class="btn btn-primary" rigth="-100px">確認</a>
                 </div>
             </div>
         </div>

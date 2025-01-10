@@ -15,6 +15,8 @@
                 <td>{{ $bikepath->nearby_attractions }}</td>
             </tr>
     </table>
-    <button class="color-button" onclick="changeCellColors()">隨機顏色</button>
+    <button class="color-button-changecolors" onclick="changeCellColors()">隨機顏色</button>
+    <a href="/bikepaths" class="color-button-goback">回到上一頁</a>
+    <a href="/" class="color-button-gohome">回到主頁</a>
 </div>
 @endsection
