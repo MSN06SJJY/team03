@@ -24,7 +24,7 @@ Route::get(
 );
 
 Route::get(
-    '1',
+    '/',
     function () {
         return view('welcome');
     } 

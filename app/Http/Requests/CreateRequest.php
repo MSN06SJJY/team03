@@ -36,7 +36,7 @@ class CreateRequest extends FormRequest
             "bikeway_name.required" => "自行車道名稱 為必填",
             "districts.required" => "行政區 為必填",
             "length.required" => "长度：必填",
-            "length.numeric" => "数字",
+            "length.numeric" => "限填數字",
             "length.min" => "長度的最小值為 0",
             "surrounding_attractions.required" => "周邊景點 為必填",
         ];
