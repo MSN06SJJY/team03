@@ -207,7 +207,7 @@ class CreateBikePathsTableSeeder extends Seeder
         $length = $array_length[array_rand($array_length)];
         $nearby_attractions = $array_nearby_attractions[array_rand($array_nearby_attractions)];
         
-        for ($i = 0; $i < 40; $i++) 
+        for ($i = 0; $i < 30; $i++) 
         {
             DB::table('bike_paths')->insert([
                 'bike_path_name' => $array_bike_path_name[array_rand($array_bike_path_name)],
